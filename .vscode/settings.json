@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "datetime.h": "c",
+        "outputapi.h": "c"
+    }
+}

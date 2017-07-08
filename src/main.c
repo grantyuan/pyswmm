@@ -27,6 +27,9 @@
 #define WINDOWS
 #endif
 
+#ifndef MAXFNAME
+#define MAXFNAME 256
+#endif
 // #ifdef WINDOWS
 // #define DLLEXPORT __declspec(dllimport) __cdecl
 // #else
