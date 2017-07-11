@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "datetime.h": "c",
-        "outputapi.h": "c"
+        "outputapi.h": "c",
+        "string.h": "c"
     }
 }
