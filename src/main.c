@@ -40,8 +40,8 @@ int main(int argc, char *argv[])
 	SMOutputAPI *smoapi = NULL;
 	//char path[MAXFNAME] = "C:\\Users\\cbarr02\\Desktop\\GitHub\\Storm-Water-Plugin\\outputAPI\\Example3.out"; // no pollutants
 	//char path[MAXFNAME] = "C:\\PROJECTCODE\\SWMMOutputAPI\\testing\\OutputTestModel_LargeOutput.out";
-	char path[MAXFNAME];
-	char pathout[MAXFNAME];
+	char * path = argv[1];
+	char pathout[MAXFNAME] = "testout.txt";
 
 	FILE *FOut;
 
@@ -64,14 +64,6 @@ int main(int argc, char *argv[])
 	//struct IDentry *linkids;
 	//struct IDentry *pollutids;
 
-	if (argv != NULL && argc >2)
-	{
-		strcpy(path,argv[1]);
-	    strncat(pathout, argv[2],strlen(argv[2]));
-		strncat(pathout, testingoutText,strlen(testingoutText)+1);
-	}else{
-		return -1;
-	}
 
 	int errBEM = SMO_open(path, &smoapi);
 	printf("Here2 %i\n", errBEM);
